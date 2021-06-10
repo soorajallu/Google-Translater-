@@ -1,4 +1,3 @@
-import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -16,10 +15,13 @@ from google_trans_new import google_translator
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+# Get a bot token from botfather
 TOKEN = os.environ.get("TOKEN", "")
+
+# Get from my.telegram.org (or @UseTGXBot)
 APP_ID = int(os.environ.get("APP_ID", ""))
 
-
+# Get from my.telegram.org (or @UseTGXBot)
 API_HASH = os.environ.get("API_HASH", "")
 app = Client(
         "ggt",
@@ -30,12 +32,13 @@ app = Client(
 @app.on_message(filters.command(['start']))
 def start(client, message):
             message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am simple Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
-             [
+            [
                 [
-                    InlineKeyboardButton("ADD ME TO GROUP" ,url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
-                 [InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]
+                    InlineKeyboardButton(✔"ADD TO GROUP" ,url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
+                 [InlineKeyboardButton("❤SHARE THIS BOT❤ ", url="https://t.me/share/url?url=https://t.me/HB_TRANSLATE_BOT") ]
            ]
         ) )
+	
 @app.on_message(filters.text & filters.private )
 def echo(client, message):
  
@@ -54,11 +57,14 @@ def echo(client, message):
 	InlineKeyboardButton("Spanish",callback_data="es")
             ],
             [InlinekeyboardButton("French",callback_data='fr'),
-            InlineKeyboardButton("Turskish",callback_data='tu'),
+            InlineKeyboardButton("Turskish",callback_data='tu')
             InlineKeyboardButton("korean",callback_data='ko')
-            ],
+            ]
+
+            
+
  
-message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
+ message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
 @app.on_callback_query()
