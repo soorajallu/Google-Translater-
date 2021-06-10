@@ -57,16 +57,11 @@ def echo(client, message):
             InlineKeyboardButton("Turskish",callback_data='tu'),
             InlineKeyboardButton("korean",callback_data='ko')
             ],
-    [InlineKeyboardButton("German",callback_data='ge')
-    InlineKeyboardButton("Arabic",callback_data='ar')
+    [InlineKeyboardButton("German",callback_data='ge'),
+    InlineKeyboardButton("Arabic",callback_data='ar'),
     InlienkeyboardButton("Russian",)callback_dat='ru')
     ]
     
-  
-
-            
-
- 
  message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
