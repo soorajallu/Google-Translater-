@@ -30,13 +30,12 @@ app = Client(
 @app.on_message(filters.command(['start']))
 def start(client, message):
             message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am simple Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
-            [
+             [
                 [
-                    InlineKeyboardButton(✔"Support ✔",url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
-                 [InlineKeyboardButton("❤JOIN❤ ", url="https://t.me/lntechnical") ]
+                    InlineKeyboardButton("ADD ME TO GROUP" ,url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
+                 [InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]
            ]
         ) )
-	
 @app.on_message(filters.text & filters.private )
 def echo(client, message):
  
