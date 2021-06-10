@@ -54,7 +54,7 @@ def echo(client, message):
 	InlineKeyboardButton("Spanish",callback_data="es")
             ],
             [InlinekeyboardButton("French",callback_data='fr'),
-            InlineKeyboardButton("Turskish",callback_data='tu')
+            InlineKeyboardButton("Turskish",callback_data='tu'),
             InlineKeyboardButton("korean",callback_data='ko')
             ],
     [InlineKeyboardButton("German",callback_data='ge')
