@@ -32,8 +32,8 @@ def start(client, message):
             message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am simple Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(✔"ADD ME TO GROUP" ,url="tg://resolve?domain=t&startgroup=start") ],
-                 [InlineKeyboardButton("❤JOIN❤ ", url="https://youtube.com/c/hb") ]
+                    InlineKeyboardButton(✔"Support ✔",url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
+                 [InlineKeyboardButton("❤JOIN❤ ", url="https://t.me/lntechnical") ]
            ]
         ) )
 	
@@ -62,7 +62,12 @@ def echo(client, message):
     InlineKeyboardButton("Arabic",callback_data='ar')
     InlienkeyboardButton("Russian",)callback_dat='ru')
     ]
-#MORE LANGAUGE COMING SOON 
+    
+  
+
+            
+
+ 
  message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
