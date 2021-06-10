@@ -16,13 +16,10 @@ from google_trans_new import google_translator
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-# Get a bot token from botfather
 TOKEN = os.environ.get("TOKEN", "")
-
-# Get from my.telegram.org (or @UseTGXBot)
 APP_ID = int(os.environ.get("APP_ID", ""))
 
-# Get from my.telegram.org (or @UseTGXBot)
+
 API_HASH = os.environ.get("API_HASH", "")
 app = Client(
         "ggt",
@@ -35,8 +32,8 @@ def start(client, message):
             message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am simple Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id , parse_mode="markdown", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ADD ME TO GROUP" ,url="tg://resolve?domain=HB_TRANSLATE_BOT&startgroup=start") ],
-                 [InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]
+                    InlineKeyboardButton(✔"ADD ME TO GROUP" ,url="tg://resolve?domain=t&startgroup=start") ],
+                 [InlineKeyboardButton("❤JOIN❤ ", url="https://youtube.com/c/hb") ]
            ]
         ) )
 	
@@ -56,12 +53,16 @@ def echo(client, message):
         	[InlineKeyboardButton("Urdu",callback_data ="ur"),
 	InlineKeyboardButton("Punjabi",callback_data="pa"),
 	InlineKeyboardButton("Spanish",callback_data="es")
-	]
+            ],
+            [InlinekeyboardButton("French",callback_data='fr'),
+            InlineKeyboardButton("Turskish",callback_data='tu')
+            InlineKeyboardButton("korean",callback_data='ko')
+            ],
+    [InlineKeyboardButton("German",callback_data='ge')
+    InlineKeyboardButton("Arabic",callback_data='ar')
+    InlienkeyboardButton("Russian",)callback_dat='ru')
     ]
- 
- )
-
- 
+#MORE LANGAUGE COMING SOON 
  message.reply_text("Select language 👇",reply_to_message_id = message.message_id, reply_markup = keybord)
     
     
